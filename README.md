@@ -1,5 +1,7 @@
 # Big League Chew
 I just wanted to have a memorable name for this project.
+
+Given a total budget, a radius, and a location, this API returns enough leagues to spend up to the budget, sponsoring as many leagues as possible without going over it.
 ## Installation
 
 This API was meticulously built using Ruby 3.1.0, Rails 7.0.3 and Postgresql.
