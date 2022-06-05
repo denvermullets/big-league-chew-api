@@ -79,6 +79,7 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
+    geocoder (1.8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -190,6 +191,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  geocoder
   pg (~> 1.1)
   pry-byebug
   puma (~> 5.0)
