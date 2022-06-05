@@ -58,4 +58,18 @@ The body is nested under `league`
 | `budget` | `integer` | Whole number representing how much your budget is |
 | `radius` | `integer` | Whole number representing how many miles your Sponsorship zone is |
 
+## Usage/Examples
 
+Sample POST request body if you're using Postman or similar.
+
+```javascript
+{
+    "league":
+    {
+        "league_name": "Jimmy John's Baseball League",
+        "latitude": "40.6914",
+        "longitude": "-73.3728",
+        "price": 2500
+    }
+}
+```
