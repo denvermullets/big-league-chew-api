@@ -1,24 +1,59 @@
-# README
+# Big League Chew
+I just wanted to have a memorable name for this project.
+## Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This API was meticulously built using Ruby 3.1.0, Rails 7.0.3 and Postgresql.
 
-Things you may want to cover:
+Installation should be handled with bundle.
 
-* Ruby version
+```bash
+  bundle install
+```
 
-* System dependencies
+## Database and Migrations
 
-* Configuration
+There's a small amount of seed data, so make sure you run that after creating your database and running migrations.
 
-* Database creation
+```bash
+  rails db:create db:migrate db:seed
+```
 
-* Database initialization
+## Starting the app
 
-* How to run the test suite
+Start the app with the ole standard
+```bash
+  rails start
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+I didn't change the default port so you should see this run on `http://localhost/3000`
 
-* Deployment instructions
+## API Reference
 
-* ...
+#### Create League
+
+```http
+  POST /api/v1/leagues
+```
+
+The body is nested under `league`
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `league_name` | `string` | This is the name of the new League |
+| `latitude` | `decimal` | Latitude co-ordinate |
+| `longitude` | `decimal` | Longitude co-ordinate |
+| `price` | `integer` | Whole number representing how much League sponsorship will cost |
+
+#### Get League - by Budget and Radius
+
+```http
+  GET /api/v1/leagues
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `location` | `string` | Latitude and Longitude co-ordinate as a string separated by a comma |
+| `budget` | `integer` | Whole number representing how much your budget is |
+| `radius` | `integer` | Whole number representing how many miles your Sponsorship zone is |
+
+
