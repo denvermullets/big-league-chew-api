@@ -8,7 +8,7 @@ module Leagues
     end
 
     def call
-      leagues = League.order(price: :asc).near(@location, @radius)
+      leagues = League.order(price: :asc).near(@location, @radius).where(price: 0..@price)
 
       max_leagues(leagues)
     end
