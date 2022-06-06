@@ -42,8 +42,7 @@ The body is nested under `league`
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `league_name` | `string` | This is the name of the new League |
-| `latitude` | `decimal` | Latitude co-ordinate |
-| `longitude` | `decimal` | Longitude co-ordinate |
+| `location` | `string` | Latitude and Longitude co-ordinate as a string separated by a comma |
 | `price` | `integer` | Whole number representing how much League sponsorship will cost |
 
 #### Get League - by Budget and Radius
@@ -67,8 +66,7 @@ Sample POST request body if you're using Postman or similar.
     "league":
     {
         "league_name": "Jimmy John's Baseball League",
-        "latitude": "40.6914",
-        "longitude": "-73.3728",
+        "location": "40.7428,-73.9712",
         "price": 2500
     }
 }
